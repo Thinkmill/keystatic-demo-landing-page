@@ -4,17 +4,17 @@
 */
 
 *,
-.with-preflight ::before,
-.with-preflight ::after {
+:where(.with-preflight) ::before,
+:where(.with-preflight) ::after {
   box-sizing: border-box; /* 1 */
   border-width: 0; /* 2 */
   border-style: solid; /* 2 */
-  border-color: theme('borderColor.DEFAULT', currentColor); /* 2 */
+  border-color: theme("borderColor.DEFAULT", currentColor); /* 2 */
 }
 
-.with-preflight ::before,
-.with-preflight ::after {
-  --tw-content: '';
+:where(.with-preflight) ::before,
+:where(.with-preflight) ::after {
+  --tw-content: "";
 }
 
 /*
@@ -26,30 +26,36 @@
 6. Use the user's configured `sans` font-variation-settings by default.
 */
 
-html .with-preflight {
+html :where(.with-preflight) {
   line-height: 1.5; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   -moz-tab-size: 4; /* 3 */
   tab-size: 4; /* 3 */
   font-family: theme(
-    'fontFamily.sans',
+    "fontFamily.sans",
     ui-sans-serif,
     system-ui,
     -apple-system,
     BlinkMacSystemFont,
-    'Segoe UI',
+    "Segoe UI",
     Roboto,
-    'Helvetica Neue',
+    "Helvetica Neue",
     Arial,
-    'Noto Sans',
+    "Noto Sans",
     sans-serif,
-    'Apple Color Emoji',
-    'Segoe UI Emoji',
-    'Segoe UI Symbol',
-    'Noto Color Emoji'
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji"
   ); /* 4 */
-  font-feature-settings: theme('fontFamily.sans[1].fontFeatureSettings', normal); /* 5 */
-  font-variation-settings: theme('fontFamily.sans[1].fontVariationSettings', normal); /* 6 */
+  font-feature-settings: theme(
+    "fontFamily.sans[1].fontFeatureSettings",
+    normal
+  ); /* 5 */
+  font-variation-settings: theme(
+    "fontFamily.sans[1].fontVariationSettings",
+    normal
+  ); /* 6 */
 }
 
 /*
@@ -57,7 +63,7 @@ html .with-preflight {
 2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
 */
 
-body .with-preflight {
+body :where(.with-preflight) {
   margin: 0; /* 1 */
   line-height: inherit; /* 2 */
 }
@@ -68,7 +74,7 @@ body .with-preflight {
 3. Ensure horizontal rules are visible by default.
 */
 
-.with-preflight hr {
+:where(.with-preflight) hr {
   height: 0; /* 1 */
   color: inherit; /* 2 */
   border-top-width: 1px; /* 3 */
@@ -78,7 +84,7 @@ body .with-preflight {
 Add the correct text decoration in Chrome, Edge, and Safari.
 */
 
-.with-preflight abbr:where([title]) {
+:where(.with-preflight) abbr:where([title]) {
   text-decoration: underline dotted;
 }
 
@@ -86,12 +92,12 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 Remove the default font size and weight for headings.
 */
 
-.with-preflight h1,
-.with-preflight h2,
-.with-preflight h3,
-.with-preflight h4,
-.with-preflight h5,
-.with-preflight h6 {
+:where(.with-preflight) h1,
+:where(.with-preflight) h2,
+:where(.with-preflight) h3,
+:where(.with-preflight) h4,
+:where(.with-preflight) h5,
+:where(.with-preflight) h6 {
   font-size: inherit;
   font-weight: inherit;
 }
@@ -100,7 +106,7 @@ Remove the default font size and weight for headings.
 Reset links to optimize for opt-in styling instead of opt-out.
 */
 
-.with-preflight a {
+:where(.with-preflight) a {
   color: inherit;
   text-decoration: inherit;
 }
@@ -109,8 +115,8 @@ Reset links to optimize for opt-in styling instead of opt-out.
 Add the correct font weight in Edge and Safari.
 */
 
-.with-preflight b,
-.with-preflight strong {
+:where(.with-preflight) b,
+:where(.with-preflight) strong {
   font-weight: bolder;
 }
 
@@ -119,19 +125,19 @@ Add the correct font weight in Edge and Safari.
 2. Correct the odd `em` font sizing in all browsers.
 */
 
-.with-preflight code,
-.with-preflight kbd,
-.with-preflight samp,
-.with-preflight pre {
+:where(.with-preflight) code,
+:where(.with-preflight) kbd,
+:where(.with-preflight) samp,
+:where(.with-preflight) pre {
   font-family: theme(
-    'fontFamily.mono',
+    "fontFamily.mono",
     ui-monospace,
     SFMono-Regular,
     Menlo,
     Monaco,
     Consolas,
-    'Liberation Mono',
-    'Courier New',
+    "Liberation Mono",
+    "Courier New",
     monospace
   ); /* 1 */
   font-size: 1em; /* 2 */
@@ -141,7 +147,7 @@ Add the correct font weight in Edge and Safari.
 Add the correct font size in all browsers.
 */
 
-.with-preflight small {
+:where(.with-preflight) small {
   font-size: 80%;
 }
 
@@ -149,19 +155,19 @@ Add the correct font size in all browsers.
 Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 */
 
-.with-preflight sub,
-.with-preflight sup {
+:where(.with-preflight) sub,
+:where(.with-preflight) sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
 
-.with-preflight sub {
+:where(.with-preflight) sub {
   bottom: -0.25em;
 }
 
-.with-preflight sup {
+:where(.with-preflight) sup {
   top: -0.5em;
 }
 
@@ -171,7 +177,7 @@ Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 3. Remove gaps between table borders by default.
 */
 
-.with-preflight table {
+:where(.with-preflight) table {
   text-indent: 0; /* 1 */
   border-color: inherit; /* 2 */
   border-collapse: collapse; /* 3 */
@@ -183,11 +189,11 @@ Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 3. Remove default padding in all browsers.
 */
 
-.with-preflight button,
-.with-preflight input,
-.with-preflight optgroup,
-.with-preflight select,
-.with-preflight textarea {
+:where(.with-preflight) button,
+:where(.with-preflight) input,
+:where(.with-preflight) optgroup,
+:where(.with-preflight) select,
+:where(.with-preflight) textarea {
   font-family: inherit; /* 1 */
   font-size: 100%; /* 1 */
   font-weight: inherit; /* 1 */
@@ -201,8 +207,8 @@ Prevent `sub` and `sup` elements from affecting the line height in all browsers.
 Remove the inheritance of text transform in Edge and Firefox.
 */
 
-.with-preflight button,
-.with-preflight select {
+:where(.with-preflight) button,
+:where(.with-preflight) select {
   text-transform: none;
 }
 
@@ -211,10 +217,10 @@ Remove the inheritance of text transform in Edge and Firefox.
 2. Remove default button styles.
 */
 
-.with-preflight button,
-.with-preflight [type='button'],
-.with-preflight [type='reset'],
-.with-preflight [type='submit'] {
+:where(.with-preflight) button,
+:where(.with-preflight) [type="button"],
+:where(.with-preflight) [type="reset"],
+:where(.with-preflight) [type="submit"] {
   -webkit-appearance: button; /* 1 */
   background-color: transparent; /* 2 */
   background-image: none; /* 2 */
@@ -224,7 +230,7 @@ Remove the inheritance of text transform in Edge and Firefox.
 Use the modern Firefox focus style for all focusable elements.
 */
 
-.with-preflight :-moz-focusring {
+:where(.with-preflight) :-moz-focusring {
   outline: auto;
 }
 
@@ -232,7 +238,7 @@ Use the modern Firefox focus style for all focusable elements.
 Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
 */
 
-.with-preflight :-moz-ui-invalid {
+:where(.with-preflight) :-moz-ui-invalid {
   box-shadow: none;
 }
 
@@ -240,7 +246,7 @@ Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/
 Add the correct vertical alignment in Chrome and Firefox.
 */
 
-.with-preflight progress {
+:where(.with-preflight) progress {
   vertical-align: baseline;
 }
 
@@ -248,8 +254,8 @@ Add the correct vertical alignment in Chrome and Firefox.
 Correct the cursor style of increment and decrement buttons in Safari.
 */
 
-.with-preflight ::-webkit-inner-spin-button,
-.with-preflight ::-webkit-outer-spin-button {
+:where(.with-preflight) ::-webkit-inner-spin-button,
+:where(.with-preflight) ::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -258,7 +264,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 2. Correct the outline style in Safari.
 */
 
-.with-preflight [type='search'] {
+:where(.with-preflight) [type="search"] {
   -webkit-appearance: textfield; /* 1 */
   outline-offset: -2px; /* 2 */
 }
@@ -267,7 +273,7 @@ Correct the cursor style of increment and decrement buttons in Safari.
 Remove the inner padding in Chrome and Safari on macOS.
 */
 
-.with-preflight ::-webkit-search-decoration {
+:where(.with-preflight) ::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -276,7 +282,7 @@ Remove the inner padding in Chrome and Safari on macOS.
 2. Change font properties to `inherit` in Safari.
 */
 
-.with-preflight ::-webkit-file-upload-button {
+:where(.with-preflight) ::-webkit-file-upload-button {
   -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
 }
@@ -285,7 +291,7 @@ Remove the inner padding in Chrome and Safari on macOS.
 Add the correct display in Chrome and Safari.
 */
 
-.with-preflight summary {
+:where(.with-preflight) summary {
   display: list-item;
 }
 
@@ -293,34 +299,34 @@ Add the correct display in Chrome and Safari.
 Removes the default spacing and border for appropriate elements.
 */
 
-.with-preflight blockquote,
-.with-preflight dl,
-.with-preflight dd,
-.with-preflight h1,
-.with-preflight h2,
-.with-preflight h3,
-.with-preflight h4,
-.with-preflight h5,
-.with-preflight h6,
-.with-preflight hr,
-.with-preflight figure,
-.with-preflight p,
-.with-preflight pre {
+:where(.with-preflight) blockquote,
+:where(.with-preflight) dl,
+:where(.with-preflight) dd,
+:where(.with-preflight) h1,
+:where(.with-preflight) h2,
+:where(.with-preflight) h3,
+:where(.with-preflight) h4,
+:where(.with-preflight) h5,
+:where(.with-preflight) h6,
+:where(.with-preflight) hr,
+:where(.with-preflight) figure,
+:where(.with-preflight) p,
+:where(.with-preflight) pre {
   margin: 0;
 }
 
-.with-preflight fieldset {
+:where(.with-preflight) fieldset {
   margin: 0;
   padding: 0;
 }
 
-.with-preflight legend {
+:where(.with-preflight) legend {
   padding: 0;
 }
 
-.with-preflight ol,
-.with-preflight ul,
-.with-preflight menu {
+:where(.with-preflight) ol,
+:where(.with-preflight) ul,
+:where(.with-preflight) menu {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -330,7 +336,7 @@ Removes the default spacing and border for appropriate elements.
 Prevent resizing textareas horizontally by default.
 */
 
-.with-preflight textarea {
+:where(.with-preflight) textarea {
   resize: vertical;
 }
 
@@ -339,25 +345,25 @@ Prevent resizing textareas horizontally by default.
 2. Set the default placeholder color to the user's configured gray 400 color.
 */
 
-.with-preflight input::placeholder,
-.with-preflight textarea::placeholder {
+:where(.with-preflight) input::placeholder,
+:where(.with-preflight) textarea::placeholder {
   opacity: 1; /* 1 */
-  color: theme('colors.gray.400', #9ca3af); /* 2 */
+  color: theme("colors.gray.400", #9ca3af); /* 2 */
 }
 
 /*
 Set the default cursor for buttons.
 */
 
-.with-preflight button,
-.with-preflight [role='button'] {
+:where(.with-preflight) button,
+:where(.with-preflight) [role="button"] {
   cursor: pointer;
 }
 
 /*
 Make sure disabled buttons don't get the pointer cursor.
 */
-.with-preflight :disabled {
+:where(.with-preflight) :disabled {
   cursor: default;
 }
 
@@ -367,14 +373,14 @@ Make sure disabled buttons don't get the pointer cursor.
    This can trigger a poorly considered lint error in some tools but is included by design.
 */
 
-.with-preflight img,
-.with-preflight svg,
-.with-preflight video,
-.with-preflight canvas,
-.with-preflight audio,
-.with-preflight iframe,
-.with-preflight embed,
-.with-preflight object {
+:where(.with-preflight) img,
+:where(.with-preflight) svg,
+:where(.with-preflight) video,
+:where(.with-preflight) canvas,
+:where(.with-preflight) audio,
+:where(.with-preflight) iframe,
+:where(.with-preflight) embed,
+:where(.with-preflight) object {
   display: block; /* 1 */
   vertical-align: middle; /* 2 */
 }
@@ -383,13 +389,13 @@ Make sure disabled buttons don't get the pointer cursor.
 Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
 */
 
-.with-preflight img,
-.with-preflight video {
+:where(.with-preflight) img,
+:where(.with-preflight) video {
   max-width: 100%;
   height: auto;
 }
 
 /* Make elements with the HTML hidden attribute stay hidden by default */
-.with-preflight [hidden] {
+:where(.with-preflight) [hidden] {
   display: none;
 }
