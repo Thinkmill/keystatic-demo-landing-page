@@ -63,7 +63,7 @@ html :where(.with-preflight) {
 2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
 */
 
-body :where(.with-preflight) {
+body {
   margin: 0; /* 1 */
   line-height: inherit; /* 2 */
 }
