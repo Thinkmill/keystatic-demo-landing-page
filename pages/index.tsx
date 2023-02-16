@@ -168,7 +168,7 @@ export default function Index({ testimonials, landingPage }) {
               <h2 className="mt-40 max-w-2xl text-6xl font-bold">
                 Our users have many reasons to choose Slate.
               </h2>
-              <p className="mt-6 text-gray-700">Here's the latest.</p>
+              <p className="mt-8 text-xl">Here's the latest.</p>
 
               <div className="mt-12">
                 <ul className="columns-2xs space-y-4">
