@@ -7,3 +7,53 @@
     @apply scroll-pt-20 scroll-smooth;
   }
 }
+
+@layer components {
+  .beam-1 {
+    position: fixed;
+    width: 1455px;
+    height: 1001px;
+    left: -249px;
+    top: -142px;
+
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      #f4ddcd 0%,
+      rgba(244, 221, 205, 0.66) 24.48%,
+      rgba(239, 238, 243, 0) 100%
+    );
+    opacity: 0.8;
+  }
+
+  .beam-2 {
+    position: fixed;
+    width: 1497px;
+    height: 1030px;
+    left: 40px;
+    top: 87px;
+
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      #cfbcdc 0%,
+      rgba(207, 188, 220, 0.66) 24.48%,
+      rgba(239, 238, 243, 0) 100%
+    );
+    opacity: 0.8;
+  }
+
+  .beam-3 {
+    position: fixed;
+    width: 1205px;
+    height: 829px;
+    left: 306px;
+    top: -40px;
+
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      #e3a9c1 0%,
+      rgba(227, 169, 193, 0.66) 24.48%,
+      rgba(239, 238, 243, 0) 100%
+    );
+    opacity: 0.8;
+  }
+}

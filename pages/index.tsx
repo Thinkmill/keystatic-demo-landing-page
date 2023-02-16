@@ -10,8 +10,8 @@ import keystaticConfig from "../keystatic";
 export default function Index({ testimonials, landingPage }) {
   return (
     <>
-      <div className="relative">
-        <header className="fixed inset-x-0 top-0 z-30 h-24 bg-white/[85%] py-6 backdrop-blur">
+      <div className="relative w-full">
+        <header className="fixed inset-x-0 top-0 z-20 h-24 bg-white/[85%] py-6 backdrop-blur">
           <div className="mx-auto flex h-full max-w-5xl items-center px-4 sm:px-6 lg:px-8">
             <Link href="/" className="group text-3xl font-semibold">
               <svg
@@ -56,20 +56,34 @@ export default function Index({ testimonials, landingPage }) {
           </div>
         </header>
 
-        <main className="relative z-20 mb-[800px] bg-gray-100 bg-[radial-gradient(50%_50%_at_50%_50%,_#F4DDCD_0%,_rgba(244,_221,_205,_0.66)_24.48%,_rgba(239,_238,_243,_0)_100%)] bg-fixed bg-no-repeat">
-          {/* Static background */}
-          {/* <div className="sticky top-80">
-            <div className="z-20 grid h-full w-full place-items-center bg-red-100">
-              <div className="relative mx-auto w-full max-w-3xl">
-                <div className="absolute top-0 right-0 h-[300px] w-[800px] rotate-45 animate-pulse rounded-full bg-yellow-300/30 blur-3xl [animation-delay:3s]"></div>
-                <div className="absolute top-32 left-48 h-[300px] w-[800px] rotate-12 animate-pulse rounded-full bg-purple-300/30 blur-3xl [animation-delay:1.5s]"></div>
-                <div className="absolute -bottom-32 -left-24 h-[300px] w-[800px] rotate-12 animate-pulse rounded-full bg-pink-300/30 blur-3xl"></div>
+        <main className="relative z-10 bg-gray-100">
+          {/* Background blurry blobs */}
+          <div className="absolute inset-0">
+            <div className="sticky h-full w-full">
+              {/* Blob 1 */}
+              <div className="fixed inset-x-0 grid h-1/2 -translate-x-[25%] place-items-center">
+                <div className="aspect-[10/8] w-[90%] animate-float bg-[radial-gradient(50%_50%_at_50%_50%,#e3a9c1_0%,rgba(227,169,193,0.66)_24.48%,rgba(239,238,243,0)_100%)] opacity-80 mix-blend-color-burn [animation-delay:4s]"></div>
+              </div>
+              {/* Blob 2 */}
+              <div className="fixed inset-x-0 top-[10%] grid h-1/2  place-items-center">
+                <div className="aspect-[10/8] w-[90%] animate-float bg-[radial-gradient(50%_50%_at_50%_50%,#cfbcdc_0%,rgba(207,188,220,0.66)_24.48%,rgba(239,238,243,0)_100%)] opacity-80 mix-blend-color-burn [animation-delay:2s]"></div>
+              </div>
+              {/* Blob 3 */}
+              <div className="fixed inset-x-0 grid h-1/2 translate-x-[25%] place-items-center">
+                <div className="aspect-[10/8] w-[90%] animate-float bg-[radial-gradient(50%_50%_at_50%_50%,#f4ddcd_0%,rgba(244,221,205,0.66)_24.48%,rgba(239,238,243,0)_100%)] opacity-80 mix-blend-color-burn"></div>
               </div>
             </div>
-          </div> */}
+          </div>
+
           {/* Hero */}
-          <section className="relative bg-gradient-to-br from-white to-transparent">
-            <div className="relative mx-auto grid max-w-5xl grid-cols-2 py-48 px-4 sm:px-6 lg:px-8">
+          <section className="relative overflow-hidden bg-gradient-to-br from-white to-transparent">
+            {/* Blob 2 */}
+
+            <div className="absolute bottom-0 right-0 z-20">
+              <div className="h-64 w-80 bg-[radial-gradient(50%_50%_at_50%_50%,#cfbcdc_0%,rgba(207,188,220,0.66)_24.48%,rgba(239,238,243,0)_100%)] opacity-60 mix-blend-color-burn [animation-delay:2s]"></div>
+            </div>
+
+            <div className="relative z-30 mx-auto grid max-w-5xl grid-cols-2 py-48 px-4 sm:px-6 lg:px-8">
               <img
                 src="/images/hero-image.png"
                 alt=""
@@ -121,7 +135,7 @@ export default function Index({ testimonials, landingPage }) {
           </section>
 
           {/* Features */}
-          <section id="features" className="py-32">
+          <section id="features" className="isolate py-32">
             <div className="px4 mx-auto grid max-w-5xl grid-cols-2 items-center sm:px-6 lg:px-8">
               <Image
                 src={featuresImage}
@@ -158,7 +172,7 @@ export default function Index({ testimonials, landingPage }) {
           </section>
 
           {/* Testimonials */}
-          <section id="reviews" className="bg-rose-100 py-32">
+          <section id="reviews" className="isolate py-32">
             <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
               <div className="rounded-2xl bg-black py-12">
                 <figure className="mx-auto flex max-w-xl flex-col items-center gap-8">
@@ -225,14 +239,14 @@ export default function Index({ testimonials, landingPage }) {
             </div>
           </section>
 
-          <section id="pricing" className="py-32">
+          <section id="pricing" className="isolate py-32">
             <div className="sm-px-6 mx-auto max-w-5xl px-4 lg:px-8">
-              <p className="text-4xl font-bold">Pricing section.</p>
+              <p className="text-center text-4xl font-bold">Pricing section.</p>
             </div>
           </section>
         </main>
 
-        <footer className="fixed inset-x-0 bottom-0 z-10 h-[800px] bg-gray-50">
+        <footer className="sticky bottom-0 bg-gray-50 py-64">
           <div className="grid h-full place-items-center">
             <p className="text-4xl">This is the footer!</p>
           </div>
