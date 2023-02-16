@@ -1,4 +1,4 @@
-import { collection, component, config, fields } from "keystatic";
+import { collection, config, fields, singleton } from "keystatic";
 
 export default config({
   storage: {
@@ -8,6 +8,15 @@ export default config({
       name: "keystatic-starter-landing-page",
     },
   },
+  singletons: {
+    landingPage: singleton({
+      label: "Landing Page",
+      directory: "public/content/landing-page",
+      schema: {
+        mainHeadline: fields.text({ label: "Main headline" }),
+      },
+    }),
+  },
   collections: {
     testimonials: collection({
       directory: "public/content/testimonials",
@@ -16,6 +25,9 @@ export default config({
       schema: {
         author: fields.text({ label: "Author" }),
         slug: fields.text({ label: "Slug" }),
+        testimonial: fields.text({ label: "Testimonial" }),
+        twitterHandle: fields.text({ label: "Twitter handle" }),
+        avatar: fields.image({ label: "Avatar" }),
       },
     }),
   },

@@ -1,6 +1,10 @@
 import Link from "next/link";
+import Image from "next/image";
 
-export default function Index() {
+import { createReader } from "keystatic/reader";
+import keystaticConfig from "../keystatic";
+
+export default function Index({ testimonials, landingPage }) {
   return (
     <>
       <header className="mx-auto flex max-w-6xl items-center gap-16 py-4 px-4 sm:px-6 lg:px-8">
@@ -24,8 +28,8 @@ export default function Index() {
         <section className="bg-gray-100 py-32">
           <div className="px4 mx-auto grid max-w-6xl grid-cols-2 sm:px-6 lg:px-8">
             <div>
-              <h1 className="mt-20 text-6xl font-semibold">
-                The future of payments.
+              <h1 className="mt-20 text-7xl font-bold">
+                {landingPage.mainHeadline}
               </h1>
               <p className="mt-8 text-lg text-gray-700">
                 Slate brings the future of credit card payments to all platforms
@@ -102,23 +106,22 @@ export default function Index() {
         </section>
 
         {/* Testimonials */}
-        <section className="py-32">
+        <section className="bg-rose-100 py-32">
           <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
             <div className="rounded-2xl bg-black py-12">
               <figure className="mx-auto flex max-w-xl flex-col items-center gap-8">
                 <blockquote className="text-center text-2xl text-white">
-                  Slate has quickly become one of my most used apps that just
-                  fits into my daily routine.
+                  {testimonials[0].testimonial}
                 </blockquote>
                 <figcaption className="flex flex-col items-center">
                   <img
-                    src="https://placekitten.com/80/80"
+                    src={`/content/testimonials/${testimonials[0].slug}/${testimonials[0].avatar}`}
                     alt=""
                     className="h-12 w-12 rounded-full"
                   />
-                  <p className="mt-2 text-white">Person's name</p>
+                  <p className="mt-2 text-white">{testimonials[0].author}</p>
                   <Link className="mt-1 text-white/80" href="#">
-                    username
+                    {testimonials[0].twitterHandle}
                   </Link>
                 </figcaption>
               </figure>
@@ -128,9 +131,71 @@ export default function Index() {
               Our users have many reasons to choose Slate.
             </h2>
             <p className="mt-6 text-gray-700">Here's the latest.</p>
+
+            <div className="mt-12">
+              <ul className="columns-2xs space-y-4">
+                {testimonials.slice(1).map((testimonial: any) => (
+                  <li
+                    key={testimonial.slug}
+                    className="break-inside-avoid-column"
+                  >
+                    <div className="rounded-2xl bg-white/75 p-10">
+                      <figure className="flex flex-col gap-8">
+                        <blockquote className="text-base text-gray-700">
+                          {testimonial.testimonial}
+                        </blockquote>
+                        <figcaption className="flex items-center gap-3">
+                          <Image
+                            width={40}
+                            height={40}
+                            src={`/content/testimonials/${testimonial.slug}/${testimonial.avatar}`}
+                            alt=""
+                            className="h-10 w-10 rounded-full"
+                          />
+                          <div>
+                            <p className="text-sm font-medium leading-none">
+                              {testimonial.author}
+                            </p>
+                            <Link
+                              className="mt-1 text-sm leading-none text-gray-600"
+                              href="#"
+                            >
+                              @{testimonial.twitterHandle}
+                            </Link>
+                          </div>
+                        </figcaption>
+                      </figure>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </section>
       </main>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const reader = createReader("", keystaticConfig);
+
+  // Testimonials
+  const testimonialSlugs = await reader.collections.testimonials.list();
+  const testimonials = await Promise.all(
+    testimonialSlugs.map(async (slug) => {
+      const testimonial = await reader.collections.testimonials.read(slug);
+      return testimonial;
+    })
+  );
+
+  // Landing page content
+  const landingPage = await reader.singletons.landingPage.read();
+
+  return {
+    props: {
+      testimonials,
+      landingPage,
+    },
+  };
 }
