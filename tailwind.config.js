@@ -9,7 +9,9 @@ module.exports = {
       keyframes: {
         float: {
           "0%": { transform: "translate(0,  0px)" },
+          "25%": { transform: "translate(-50px, 100px)" },
           "50%": { transform: "translate(0, 200px)" },
+          "75%": { transform: "translate(50px, 200px)" },
           "100%": { transform: "translate(0, -0px)" },
         },
       },
