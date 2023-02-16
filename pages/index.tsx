@@ -79,11 +79,10 @@ export default function Index({ testimonials, landingPage }) {
           <section className="relative overflow-hidden bg-gradient-to-br from-white/50 to-transparent">
             {/* Blob 2 */}
 
-            <div className="absolute bottom-0 right-0 z-20">
-              <div className="h-[400px] w-[500px] bg-[radial-gradient(50%_50%_at_50%_50%,#cfbcdc_0%,rgba(207,188,220,0.66)_24.48%,rgba(239,238,243,0)_100%)] opacity-60 mix-blend-color-burn [animation-delay:2s]"></div>
-            </div>
-
-            <div className="relative z-30 mx-auto grid max-w-5xl grid-cols-2 py-48 px-4 sm:px-6 lg:px-8">
+            <div className="relative z-10 mx-auto grid max-w-5xl grid-cols-2 py-48 px-4 sm:px-6 lg:px-8">
+              <div className="absolute bottom-0 -right-24">
+                <div className="h-[400px] w-[500px] bg-[radial-gradient(50%_50%_at_50%_50%,#cfbcdc_0%,rgba(207,188,220,0.66)_24.48%,rgba(239,238,243,0)_100%)] opacity-60 mix-blend-color-burn [animation-delay:2s]"></div>
+              </div>
               <img
                 src="/images/hero-image.png"
                 alt=""
