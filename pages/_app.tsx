@@ -11,7 +11,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   if (isKeystaticPage) return <Component {...pageProps} />;
 
   return (
-    <div className="with-preflight">
+    <div className="with-preflight antialiased">
       <Component {...pageProps} />
     </div>
   );
