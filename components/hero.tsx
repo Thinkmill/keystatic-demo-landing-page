@@ -46,7 +46,7 @@ export default function Hero({ data }) {
             </a>
             <a
               href="#"
-              className="rounded-full border border-black px-4 py-2.5 font-medium hover:bg-gray-200"
+              className="rounded-full border border-black px-5 py-2.5 font-medium hover:bg-gray-200"
             >
               Watch promo
             </a>

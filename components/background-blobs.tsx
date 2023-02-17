@@ -6,7 +6,7 @@
 
 export default function BackgroundBlobs() {
   return (
-    <div className="absolute inset-0">
+    <div className="absolute inset-0 overflow-hidden [clip:rect(0,auto,auto,0)]">
       <div className="sticky h-full w-full">
         {/* Blob 1 */}
         <div className="fixed inset-x-0 grid h-1/2 -translate-x-[15%] place-items-center">

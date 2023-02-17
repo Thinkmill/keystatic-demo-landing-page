@@ -44,9 +44,12 @@ export default function Pricing() {
         </h2>
         <p className="mt-8 text-xl">No commitment. Cancel anytime.</p>
 
-        <ul className="mt-14 grid grid-cols-3 items-start gap-6">
+        <ul className="mt-14 grid items-start gap-6 lg:grid-cols-3">
           {plans.map((plan) => (
-            <li key={plan.name} className="overflow-hidden rounded-3xl">
+            <li
+              key={plan.name}
+              className="max-w-md overflow-hidden rounded-3xl"
+            >
               <div className="bg-white/75 p-10 backdrop-blur-md">
                 <p>{plan.name}</p>
                 {/* Plan price */}
@@ -70,7 +73,7 @@ export default function Pricing() {
 
                 <a
                   href="#"
-                  className="mt-6 inline-block rounded-full border border-black px-4 py-2.5 font-medium hover:bg-gray-200"
+                  className="mt-6 inline-block rounded-full border border-black px-5 py-2.5 font-medium hover:bg-gray-200"
                 >
                   {plan?.monthlyPrice ? "Subscribe" : "Get started"}
                 </a>
