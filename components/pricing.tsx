@@ -37,18 +37,33 @@ function cx(...classes: string[]) {
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="isolate pb-20 sm:py-32">
+    <section id="pricing" className="isolate pb-20 md:py-32">
       <div className="mx-auto max-w-5xl px-6 lg:px-8">
         <h2 className="mt-24 max-w-2xl text-4xl font-bold sm:text-6xl md:mt-40">
           Choose the plan that’s right for you.
         </h2>
         <p className="mt-6 text-xl sm:mt-8">No commitment. Cancel anytime.</p>
 
-        <ul className="mt-14 grid items-start gap-6 lg:grid-cols-3">
+        {/* <div className="mx-auto ">
+          <div className="flex h-screen w-96 flex-shrink-0 snap-start items-center justify-center bg-amber-200 text-8xl">
+            1
+          </div>
+          <div className="flex h-screen w-96 flex-shrink-0  snap-start items-center justify-center bg-teal-200 text-8xl">
+            2
+          </div>
+          <div className="flex h-screen w-96 flex-shrink-0 snap-start items-center justify-center bg-cyan-200 text-8xl">
+            3
+          </div>
+          <div className="flex h-screen w-96 flex-shrink-0 snap-start items-center justify-center bg-fuchsia-200 text-8xl">
+            4
+          </div>
+        </div> */}
+
+        <ul className="-mx-6 mt-14 flex snap-x snap-mandatory scroll-m-6 scroll-p-6 items-start gap-6 overflow-x-auto px-6 lg:grid lg:grid-cols-3">
           {plans.map((plan) => (
             <li
               key={plan.name}
-              className="max-w-md overflow-hidden rounded-3xl"
+              className="w-[90%] max-w-[540px] shrink-0 snap-start overflow-hidden rounded-3xl align-top lg:w-full"
             >
               <div className="bg-white/75 p-10 backdrop-blur-md">
                 <p>{plan.name}</p>

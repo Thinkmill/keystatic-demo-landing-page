@@ -32,9 +32,9 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="isolate sm:py-32">
-      <div className="mx-auto grid max-w-5xl items-center gap-y-6 px-6 sm:grid-cols-2 lg:px-8">
-        <div className="hidden sm:block">
+    <section id="features" className="isolate md:py-32">
+      <div className="mx-auto grid max-w-5xl items-center gap-y-6 px-6 md:grid-cols-2 lg:px-8">
+        <div className="hidden md:block">
           <Image
             src={featuresImage}
             width={900}
@@ -43,7 +43,7 @@ export default function Features() {
             className="rounded-2xl"
           />
         </div>
-        <div className="sm:hidden">
+        <div className="md:hidden">
           <Image
             src={featuresImageCropped}
             width={900}
@@ -52,7 +52,7 @@ export default function Features() {
             className="rounded-2xl"
           />
         </div>
-        <Accordion.Root type="single" className="space-y-4 sm:space-y-8">
+        <Accordion.Root type="single" className="space-y-4 md:space-y-8">
           {features.map((feature) => (
             <Accordion.Item
               key={feature.id}
