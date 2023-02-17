@@ -6,6 +6,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        "blob-1": "rgb(227,169,193)",
+        "blob-2": "rgb(207,188,220)",
+        "blob-3": "rgb(244,221,205)",
+      },
       maxWidth: {
         "5xl": 1064,
       },
