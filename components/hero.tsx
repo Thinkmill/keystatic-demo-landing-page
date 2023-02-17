@@ -7,15 +7,28 @@ export default function Hero({ data: { heroHeadline, heroIntroText } }) {
     <section className="relative overflow-hidden bg-gradient-to-br from-white/50 to-transparent">
       {/* Blob 2 */}
 
-      <div className="relative z-10 mx-auto grid max-w-5xl grid-cols-2 py-48 px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto grid max-w-5xl px-4 py-12 sm:px-6 sm:py-32 md:grid-cols-2 md:py-48 lg:px-8">
         <div className="absolute bottom-0 -right-24">
           <div className="h-[400px] w-[500px] bg-[radial-gradient(50%_50%_at_50%_50%,#cfbcdc_0%,rgba(207,188,220,0.66)_24.48%,rgba(239,238,243,0)_100%)] opacity-60 mix-blend-color-burn [animation-delay:2s]"></div>
         </div>
-        <Image src={heroImage} alt="" className="absolute right-0 bottom-0" />
+        <Image
+          src={heroImage}
+          alt=""
+          className="absolute right-0 bottom-0 hidden max-w-[70%] md:block"
+        />
+
+        {/* Mobile image */}
+        <Image src={heroImage} alt="" className="mx-auto md:hidden" />
         <div>
-          <h1 className="mt-20 text-7xl font-bold">{heroHeadline}</h1>
-          <p className="mt-10 text-xl leading-8">{heroIntroText}</p>
-          <div className="mt-20 flex items-center gap-6">
+          <h1 className="mt-0 text-5xl font-bold md:mt-20 md:text-6xl lg:text-7xl">
+            {heroHeadline}
+          </h1>
+          <p className="mt-6 sm:mt-10 sm:text-xl sm:leading-8">
+            {heroIntroText}
+          </p>
+
+          {/* Buttons */}
+          <div className="mt-12 flex items-center gap-6 md:mt-20">
             <a
               href="#"
               className="flex items-center gap-2 rounded-3xl bg-black p-4 text-white hover:bg-gray-900"

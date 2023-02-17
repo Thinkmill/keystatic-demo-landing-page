@@ -29,10 +29,15 @@ module.exports = {
           "75%": { transform: "translate(-100px, -50px)" },
           "100%": { transform: "translate(0, 0)" },
         },
+        fadeIn: {
+          from: { opacity: 0.2, transform: "translateY(-2px)" },
+          to: { opacity: 1, transform: "translateY(0)" },
+        },
       },
       animation: {
         float: "float 5s linear infinite",
         float2: "float2 5s linear infinite",
+        fadeIn: "fadeIn 0.2s ease-out",
       },
     },
   },

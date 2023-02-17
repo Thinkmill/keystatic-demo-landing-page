@@ -4,11 +4,11 @@ import LogoLink from "./logo-link";
 
 export default function Navbar() {
   return (
-    <header className="fixed inset-x-0 top-0 z-20 h-24 bg-white/[85%] py-6 backdrop-blur">
-      <div className="mx-auto flex h-full max-w-5xl items-center px-4 sm:px-6 lg:px-8">
+    <header className="absolute inset-x-0 top-0 z-20 py-4 sm:fixed sm:h-24 sm:bg-white/[85%] sm:py-6 sm:backdrop-blur">
+      <div className="mx-auto flex h-full max-w-5xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <LogoLink />
-        <nav className="ml-16 flex w-full items-center justify-between">
-          <div className="flex gap-10">
+        <nav className="flex items-center justify-between sm:ml-16 sm:w-full">
+          <div className="hidden gap-10 sm:flex">
             <a className="font-medium" href="#features">
               Features
             </a>

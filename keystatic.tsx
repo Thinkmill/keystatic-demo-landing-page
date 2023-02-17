@@ -14,9 +14,12 @@ export default config({
       directory: "public/content/landing-page",
       schema: {
         heroHeadline: fields.text({ label: "Hero headline" }),
-        heroIntroText: fields.text({ label: "Hero intro text" }),
+        heroIntroText: fields.text({
+          label: "Hero intro text",
+          multiline: true,
+        }),
         footerHeadline: fields.text({ label: "Footer headline" }),
-        footerText: fields.text({ label: "Footer text" }),
+        footerText: fields.text({ label: "Footer text", multiline: true }),
       },
     }),
   },
@@ -28,7 +31,7 @@ export default config({
       schema: {
         author: fields.text({ label: "Author" }),
         slug: fields.text({ label: "Slug" }),
-        testimonial: fields.text({ label: "Testimonial" }),
+        testimonial: fields.text({ label: "Testimonial", multiline: true }),
         featured: fields.checkbox({ label: "Featured testimonial" }),
         twitterHandle: fields.text({ label: "Twitter handle" }),
         avatar: fields.image({ label: "Avatar" }),
