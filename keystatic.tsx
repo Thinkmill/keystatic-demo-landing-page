@@ -13,7 +13,8 @@ export default config({
       label: "Landing Page",
       directory: "public/content/landing-page",
       schema: {
-        mainHeadline: fields.text({ label: "Main headline" }),
+        heroHeadline: fields.text({ label: "Hero headline" }),
+        heroIntroText: fields.text({ label: "Hero intro text" }),
       },
     }),
   },

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import heroImage from "../public/images/hero-image.png";
 
-export default function Hero({ data }) {
+export default function Hero({ data: { heroHeadline, heroIntroText } }) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-white/50 to-transparent">
       {/* Blob 2 */}
@@ -13,12 +13,8 @@ export default function Hero({ data }) {
         </div>
         <Image src={heroImage} alt="" className="absolute right-0 bottom-0" />
         <div>
-          <h1 className="mt-20 text-7xl font-bold">{data.mainHeadline}</h1>
-          <p className="mt-10 text-xl leading-8">
-            Slate brings the future of credit card payments to all platforms via
-            it's simple app. Providing secure, surcharge free transactions
-            anywhere in the world, with any currency.
-          </p>
+          <h1 className="mt-20 text-7xl font-bold">{heroHeadline}</h1>
+          <p className="mt-10 text-xl leading-8">{heroIntroText}</p>
           <div className="mt-20 flex items-center gap-6">
             <a
               href="#"
