@@ -13,22 +13,29 @@ import Testimonials from "../components/testimonials";
 
 // ----------
 
-export default function Index({
-  testimonials,
-  landingPage: { heroHeadline, heroIntroText },
-}) {
+export default function Index({ testimonials, landingPage }) {
   return (
     <>
       <div className="relative w-full">
         <Navbar />
         <main className="relative z-10 bg-gray-100">
           <BackgroundBlobs />
-          <Hero data={{ heroHeadline, heroIntroText }} />
+          <Hero
+            data={{
+              heroHeadline: landingPage.heroHeadline,
+              heroIntroText: landingPage.heroIntroText,
+            }}
+          />
           <Features />
           <Testimonials testimonials={testimonials} />
           <Pricing />
         </main>
-        <Footer />
+        <Footer
+          data={{
+            footerHeadline: landingPage.footerHeadline,
+            footerText: landingPage.footerText,
+          }}
+        />
       </div>
     </>
   );

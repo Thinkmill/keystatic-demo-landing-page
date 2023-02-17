@@ -2,28 +2,40 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Testimonials({ testimonials }) {
+  /* 
+    The Featured Testimonial will be display in the 
+    more prominent callout above the 
+    other testimonials.
+  */
+  const featuredTestimonial =
+    testimonials.find((testimonial) => testimonial.featured) || testimonials[0];
+
+  const otherTestimonials = testimonials.filter(
+    (testimonial) => testimonial.slug !== featuredTestimonial.slug
+  );
+
   return (
     <section id="reviews" className="isolate py-32">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="rounded-3xl bg-black/90 py-16">
           <figure className="mx-auto grid max-w-2xl items-center gap-8">
             <blockquote className="text-center text-3xl leading-10 text-white">
-              {testimonials[0].testimonial}
+              {featuredTestimonial.testimonial}
             </blockquote>
             <figcaption className="flex flex-col items-center">
               <img
-                src={`/content/testimonials/${testimonials[0].slug}/${testimonials[0].avatar}`}
+                src={`/content/testimonials/${featuredTestimonial.slug}/${featuredTestimonial.avatar}`}
                 alt=""
                 className="h-12 w-12 rounded-full"
               />
               <p className="mt-3 text-sm font-medium leading-none text-white">
-                {testimonials[0].author}
+                {featuredTestimonial.author}
               </p>
               <Link
                 className="mt-1 text-sm leading-none text-white/80"
                 href="#"
               >
-                @{testimonials[0].twitterHandle}
+                @{featuredTestimonial.twitterHandle}
               </Link>
             </figcaption>
           </figure>
@@ -36,7 +48,7 @@ export default function Testimonials({ testimonials }) {
 
         <div className="mt-12">
           <ul className="columns-2xs space-y-4">
-            {testimonials.slice(1).map((testimonial: any) => (
+            {otherTestimonials.map((testimonial: any) => (
               <li key={testimonial.slug} className="break-inside-avoid">
                 <div className="rounded-2xl bg-white/40 p-10 backdrop-blur">
                   <figure className="grid gap-8">

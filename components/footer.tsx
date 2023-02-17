@@ -1,4 +1,4 @@
-export default function Footer() {
+export default function Footer({ data: { footerHeadline, footerText } }) {
   return (
     <footer className="sticky bottom-0 overflow-hidden">
       <div className="relative bg-blob-2 py-60">
@@ -22,13 +22,8 @@ export default function Footer() {
               clipRule="evenodd"
             />
           </svg>
-          <h2 className="mt-10 text-6xl font-bold">
-            Get started with Slate, today.
-          </h2>
-          <p className="mt-6 pr-8 text-xl leading-8">
-            Sign up in minutes and receive the first 3 months free. If you’re
-            not happy with Slate, simply cancel at anytime. No worries.
-          </p>
+          <h2 className="mt-10 text-6xl font-bold">{footerHeadline}</h2>
+          <p className="mt-6 pr-8 text-xl leading-8">{footerText}</p>
           <a
             href="#"
             className="mt-10 inline-block rounded-full border bg-black px-5 py-2.5 font-medium text-white hover:bg-gray-900"

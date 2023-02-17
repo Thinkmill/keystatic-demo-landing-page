@@ -42,7 +42,7 @@ export default function Hero({ data: { heroHeadline, heroIntroText } }) {
             </a>
             <a
               href="#"
-              className="rounded-full border border-black px-5 py-2.5 font-medium hover:bg-gray-200"
+              className="rounded-full border border-black px-5 py-2.5 font-medium hover:bg-gray-200/25"
             >
               Watch promo
             </a>

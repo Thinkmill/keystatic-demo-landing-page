@@ -15,6 +15,8 @@ export default config({
       schema: {
         heroHeadline: fields.text({ label: "Hero headline" }),
         heroIntroText: fields.text({ label: "Hero intro text" }),
+        footerHeadline: fields.text({ label: "Footer headline" }),
+        footerText: fields.text({ label: "Footer text" }),
       },
     }),
   },
@@ -27,6 +29,7 @@ export default config({
         author: fields.text({ label: "Author" }),
         slug: fields.text({ label: "Slug" }),
         testimonial: fields.text({ label: "Testimonial" }),
+        featured: fields.checkbox({ label: "Featured testimonial" }),
         twitterHandle: fields.text({ label: "Twitter handle" }),
         avatar: fields.image({ label: "Avatar" }),
       },

@@ -73,7 +73,13 @@ export default function Pricing() {
 
                 <a
                   href="#"
-                  className="mt-6 inline-block rounded-full border border-black px-5 py-2.5 font-medium hover:bg-gray-200"
+                  className={cx(
+                    "mt-6 inline-block rounded-full border border-black px-5 py-2.5 font-medium",
+
+                    plan.name === "Pro"
+                      ? "hover:bg-blob-3/30"
+                      : "hover:bg-blob-2/30"
+                  )}
                 >
                   {plan?.monthlyPrice ? "Subscribe" : "Get started"}
                 </a>
