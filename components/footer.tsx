@@ -7,7 +7,7 @@ export default function Footer({ data: { footerHeadline, footerText } }) {
 
         <div className="absolute -top-64 -left-64 aspect-[10/8] w-[1200px] animate-float bg-[radial-gradient(50%_50%_at_50%_50%,#f4ddcd_0%,theme(colors.blob-2)_24.48%,rgba(239,238,243,0)_100%)] opacity-50 mix-blend-overlay [animation-delay:4s]"></div>
 
-        <div className="relative isolate z-40 mx-auto max-w-xl px-4 sm:px-6 lg:px-8">
+        <div className="relative isolate z-40 mx-auto max-w-xl px-6 lg:px-8">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

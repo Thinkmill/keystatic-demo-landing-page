@@ -2,6 +2,7 @@ import Image from "next/image";
 import * as Accordion from "@radix-ui/react-accordion";
 
 import featuresImage from "../public/images/features-image.png";
+import featuresImageCropped from "../public/images/features-image-cropped.png";
 
 const features = [
   {
@@ -31,16 +32,27 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="isolate py-32">
-      <div className="px4 mx-auto grid max-w-5xl grid-cols-2 items-center sm:px-6 lg:px-8">
-        <Image
-          src={featuresImage}
-          width={900}
-          height={1600}
-          alt=""
-          className="rounded-2xl"
-        />
-        <Accordion.Root type="single" className="space-y-8">
+    <section id="features" className="isolate sm:py-32">
+      <div className="mx-auto grid max-w-5xl items-center gap-y-6 px-6 sm:grid-cols-2 lg:px-8">
+        <div className="hidden sm:block">
+          <Image
+            src={featuresImage}
+            width={900}
+            height={1600}
+            alt=""
+            className="rounded-2xl"
+          />
+        </div>
+        <div className="sm:hidden">
+          <Image
+            src={featuresImageCropped}
+            width={900}
+            height={900}
+            alt=""
+            className="rounded-2xl"
+          />
+        </div>
+        <Accordion.Root type="single" className="space-y-4 sm:space-y-8">
           {features.map((feature) => (
             <Accordion.Item
               key={feature.id}

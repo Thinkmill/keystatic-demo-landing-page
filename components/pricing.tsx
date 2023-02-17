@@ -37,12 +37,12 @@ function cx(...classes: string[]) {
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="isolate py-32">
-      <div className="sm-px-6 mx-auto max-w-5xl px-4 lg:px-8">
-        <h2 className="max-w-2xl text-6xl font-bold">
+    <section id="pricing" className="isolate pb-20 sm:py-32">
+      <div className="mx-auto max-w-5xl px-6 lg:px-8">
+        <h2 className="mt-24 max-w-2xl text-4xl font-bold sm:text-6xl md:mt-40">
           Choose the plan that’s right for you.
         </h2>
-        <p className="mt-8 text-xl">No commitment. Cancel anytime.</p>
+        <p className="mt-6 text-xl sm:mt-8">No commitment. Cancel anytime.</p>
 
         <ul className="mt-14 grid items-start gap-6 lg:grid-cols-3">
           {plans.map((plan) => (

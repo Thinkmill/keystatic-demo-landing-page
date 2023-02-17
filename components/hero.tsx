@@ -7,7 +7,7 @@ export default function Hero({ data: { heroHeadline, heroIntroText } }) {
     <section className="relative overflow-hidden bg-gradient-to-br from-white/50 to-transparent">
       {/* Blob 2 */}
 
-      <div className="relative z-10 mx-auto grid max-w-5xl px-4 py-12 sm:px-6 sm:py-32 md:grid-cols-2 md:py-48 lg:px-8">
+      <div className="relative z-10 mx-auto grid max-w-5xl py-12 px-6 sm:py-32 md:grid-cols-2 md:py-48 lg:px-8">
         <div className="absolute bottom-0 -right-24">
           <div className="h-[400px] w-[500px] bg-[radial-gradient(50%_50%_at_50%_50%,#cfbcdc_0%,rgba(207,188,220,0.66)_24.48%,rgba(239,238,243,0)_100%)] opacity-60 mix-blend-color-burn [animation-delay:2s]"></div>
         </div>
