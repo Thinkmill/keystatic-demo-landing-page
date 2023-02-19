@@ -41,7 +41,7 @@ export default function Footer({
           </p>
           <a
             href="#"
-            className="mt-6 inline-block rounded-full border bg-black px-5 py-2.5 font-medium text-white hover:bg-gray-900 sm:mt-10"
+            className="mt-6 inline-block rounded-full bg-black px-5 py-2.5 font-medium text-white hover:bg-gray-900 sm:mt-10"
           >
             Sign up
           </a>
