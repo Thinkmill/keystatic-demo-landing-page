@@ -5,15 +5,20 @@ import keystaticConfig from "../keystatic";
 // Page section components
 import BackgroundBlobs from "../components/background-blobs";
 import Features from "../components/features";
-import Footer from "../components/footer";
-import Hero from "../components/hero";
+import Footer, { FooterProps } from "../components/footer";
+import Hero, { HeroProps } from "../components/hero";
 import Navbar from "../components/navbar";
 import Pricing from "../components/pricing";
-import Testimonials from "../components/testimonials";
+import Testimonials, { TestimonialProps } from "../components/testimonials";
+
+type HomepageProps = {
+  testimonials: TestimonialProps[];
+  landingPage: HeroProps & FooterProps;
+};
 
 // ----------
 
-export default function Index({ testimonials, landingPage }) {
+export default function Index({ testimonials, landingPage }: HomepageProps) {
   return (
     <>
       <div className="relative w-full">

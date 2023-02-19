@@ -37,7 +37,7 @@ function cx(...classes: string[]) {
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="isolate pb-20 md:py-32">
+    <section id="pricing" className="isolate pb-20 md:pb-32">
       <div className="mx-auto max-w-5xl px-6 lg:px-8">
         <h2 className="mt-24 max-w-2xl text-4xl font-bold sm:text-6xl md:mt-40">
           Choose the plan that’s right for you.

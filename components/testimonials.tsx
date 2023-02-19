@@ -1,21 +1,37 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Testimonials({ testimonials }) {
+export type TestimonialProps = {
+  author: string;
+  slug: string;
+  testimonial: string;
+  featured: boolean;
+  twitterHandle: string;
+  avatar: string;
+};
+
+type ComponentProps = {
+  testimonials: TestimonialProps[];
+};
+
+export default function Testimonials({ testimonials }: ComponentProps) {
   /* 
     The Featured Testimonial will be display in the 
     more prominent callout above the 
     other testimonials.
   */
   const featuredTestimonial =
-    testimonials.find((testimonial) => testimonial.featured) || testimonials[0];
+    testimonials.find(
+      (testimonial: TestimonialProps) => testimonial.featured
+    ) || testimonials[0];
 
   const otherTestimonials = testimonials.filter(
-    (testimonial) => testimonial.slug !== featuredTestimonial.slug
+    (testimonial: TestimonialProps) =>
+      testimonial.slug !== featuredTestimonial.slug
   );
 
   return (
-    <section id="reviews" className="isolate pt-16 sm:py-32">
+    <section id="reviews" className="isolate pt-16 sm:pt-32">
       <div className="mx-auto max-w-5xl px-6 lg:px-8">
         <div className="rounded-3xl bg-black/90 px-6 py-8 sm:py-16 sm:px-8">
           <figure className="mx-auto grid max-w-2xl items-center gap-8">

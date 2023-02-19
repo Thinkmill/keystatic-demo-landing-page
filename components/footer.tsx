@@ -1,4 +1,15 @@
-export default function Footer({ data: { footerHeadline, footerText } }) {
+export type FooterProps = {
+  footerHeadline: string;
+  footerText: string;
+};
+
+type ComponentProps = {
+  data: FooterProps;
+};
+
+export default function Footer({
+  data: { footerHeadline, footerText },
+}: ComponentProps) {
   return (
     <footer className="sticky bottom-0  overflow-hidden">
       <div className="relative grid h-screen max-h-[800px] min-h-0 place-items-center overflow-y-auto overflow-x-hidden bg-blob-2 sm:pt-32 sm:pb-16 md:max-h-[1200px] md:py-48 lg:py-60">

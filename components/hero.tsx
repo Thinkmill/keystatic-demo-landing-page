@@ -2,7 +2,18 @@ import Image from "next/image";
 
 import heroImage from "../public/images/hero-image.png";
 
-export default function Hero({ data: { heroHeadline, heroIntroText } }) {
+export type HeroProps = {
+  heroHeadline: string;
+  heroIntroText: string;
+};
+
+type ComponentProps = {
+  data: HeroProps;
+};
+
+export default function Hero({
+  data: { heroHeadline, heroIntroText },
+}: ComponentProps) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-white/50 to-transparent">
       {/* Blob 2 */}
