@@ -44,31 +44,16 @@ export default function Pricing() {
         </h2>
         <p className="mt-6 text-xl sm:mt-8">No commitment. Cancel anytime.</p>
 
-        {/* <div className="mx-auto ">
-          <div className="flex h-screen w-96 flex-shrink-0 snap-start items-center justify-center bg-amber-200 text-8xl">
-            1
-          </div>
-          <div className="flex h-screen w-96 flex-shrink-0  snap-start items-center justify-center bg-teal-200 text-8xl">
-            2
-          </div>
-          <div className="flex h-screen w-96 flex-shrink-0 snap-start items-center justify-center bg-cyan-200 text-8xl">
-            3
-          </div>
-          <div className="flex h-screen w-96 flex-shrink-0 snap-start items-center justify-center bg-fuchsia-200 text-8xl">
-            4
-          </div>
-        </div> */}
-
-        <ul className="-mx-6 mt-14 flex snap-x snap-mandatory scroll-m-6 scroll-p-6 items-start gap-6 overflow-x-auto px-6 lg:grid lg:grid-cols-3">
+        <ul className="-mx-6 mt-14 flex snap-x snap-mandatory scroll-m-6 scroll-p-6 items-start gap-4 overflow-x-auto px-6 sm:gap-6 lg:grid lg:grid-cols-3">
           {plans.map((plan) => (
             <li
               key={plan.name}
-              className="w-[90%] max-w-[540px] shrink-0 snap-start overflow-hidden rounded-3xl align-top lg:w-full"
+              className="w-[100%] max-w-[540px] shrink-0 snap-start overflow-hidden rounded-3xl align-top lg:w-full"
             >
-              <div className="bg-white/75 p-10 backdrop-blur-md">
+              <div className="bg-white/75 p-6 backdrop-blur-md sm:p-10">
                 <p>{plan.name}</p>
                 {/* Plan price */}
-                <p className="mt-6">
+                <p className="mt-4 sm:mt-6">
                   {plan?.monthlyPrice ? (
                     <span className="flex items-baseline gap-1">
                       <span className="text-2xl font-bold leading-7">
@@ -89,7 +74,7 @@ export default function Pricing() {
                 <a
                   href="#"
                   className={cx(
-                    "mt-6 inline-block rounded-full border border-black px-5 py-2.5 font-medium",
+                    "mt-4 inline-block rounded-full border border-black px-5 py-2.5 font-medium sm:mt-6",
 
                     plan.name === "Pro"
                       ? "hover:bg-blob-3/30"
@@ -101,11 +86,11 @@ export default function Pricing() {
               </div>
               <div
                 className={cx(
-                  "p-10",
+                  "p-6 sm:p-10",
                   plan.name === "Pro" ? "bg-blob-3/60" : "bg-blob-2/60"
                 )}
               >
-                <ul className="space-y-5">
+                <ul className="space-y-3 sm:space-y-5">
                   {/* Base features */}
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2">

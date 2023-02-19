@@ -1,17 +1,17 @@
 export default function Footer({ data: { footerHeadline, footerText } }) {
   return (
-    <footer className="sticky bottom-0 overflow-hidden">
-      <div className="relative bg-blob-2 py-60">
+    <footer className="sticky bottom-0  overflow-hidden">
+      <div className="relative grid h-screen max-h-[800px] min-h-0 place-items-center overflow-y-auto overflow-x-hidden bg-blob-2 sm:pt-32 sm:pb-16 md:max-h-[1200px] md:py-48 lg:py-60">
         {/* Footer blobs */}
-        <div className="absolute -top-64 left-0 aspect-[10/8] w-[1200px] animate-float bg-[radial-gradient(50%_50%_at_50%_50%,#e3a9c1_0%,theme(colors.blob-1)_24.48%,rgba(239,238,243,0)_100%)]"></div>
+        <div className=" absolute -top-64 left-0 aspect-[10/8] w-[1200px] animate-float bg-[radial-gradient(50%_50%_at_50%_50%,#e3a9c1_0%,theme(colors.blob-1)_24.48%,rgba(239,238,243,0)_100%)]"></div>
 
-        <div className="absolute -top-64 -left-64 aspect-[10/8] w-[1200px] animate-float bg-[radial-gradient(50%_50%_at_50%_50%,#f4ddcd_0%,theme(colors.blob-2)_24.48%,rgba(239,238,243,0)_100%)] opacity-50 mix-blend-overlay [animation-delay:4s]"></div>
+        <div className="absolute -top-64 -left-64 aspect-[10/8] h-full w-[1200px] animate-float bg-[radial-gradient(50%_50%_at_50%_50%,#f4ddcd_0%,theme(colors.blob-2)_24.48%,rgba(239,238,243,0)_100%)] opacity-50 mix-blend-overlay [animation-delay:4s]"></div>
 
-        <div className="relative isolate z-40 mx-auto max-w-xl px-6 lg:px-8">
+        <div className="relative isolate z-40 mx-auto h-96 max-h-screen max-w-xl px-6 lg:px-8">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
-            className="group h-20 w-20"
+            className="group h-12 w-12 sm:h-20 sm:w-20"
             viewBox="0 0 80 80"
           >
             <path
@@ -22,11 +22,15 @@ export default function Footer({ data: { footerHeadline, footerText } }) {
               clipRule="evenodd"
             />
           </svg>
-          <h2 className="mt-10 text-6xl font-bold">{footerHeadline}</h2>
-          <p className="mt-6 pr-8 text-xl leading-8">{footerText}</p>
+          <h2 className="mt-4 text-4xl font-bold sm:mt-10 sm:text-5xl md:text-6xl">
+            {footerHeadline}
+          </h2>
+          <p className="mt-4 pr-8 text-lg sm:mt-6 sm:text-xl sm:leading-8">
+            {footerText}
+          </p>
           <a
             href="#"
-            className="mt-10 inline-block rounded-full border bg-black px-5 py-2.5 font-medium text-white hover:bg-gray-900"
+            className="mt-6 inline-block rounded-full border bg-black px-5 py-2.5 font-medium text-white hover:bg-gray-900 sm:mt-10"
           >
             Sign up
           </a>

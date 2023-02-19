@@ -18,9 +18,13 @@ export default function Hero({ data: { heroHeadline, heroIntroText } }) {
         />
 
         {/* Mobile image */}
-        <Image src={heroImage} alt="" className="mx-auto md:hidden" />
+        <Image
+          src={heroImage}
+          alt=""
+          className="mx-auto w-[85%] max-w-[80%] md:hidden"
+        />
         <div>
-          <h1 className="mt-0 text-5xl font-bold md:mt-20 md:text-6xl lg:text-7xl">
+          <h1 className="mt-0 text-4xl font-bold sm:text-5xl md:mt-20 md:text-6xl lg:text-7xl">
             {heroHeadline}
           </h1>
           <p className="mt-6 sm:mt-10 sm:text-xl sm:leading-8">
@@ -28,7 +32,7 @@ export default function Hero({ data: { heroHeadline, heroIntroText } }) {
           </p>
 
           {/* Buttons */}
-          <div className="mt-12 flex items-center gap-6 md:mt-20">
+          <div className="mt-12 flex flex-wrap items-center gap-6 md:mt-20 md:gap-6">
             <a
               href="#"
               className="flex items-center gap-2 rounded-3xl bg-black p-4 text-white hover:bg-gray-900"

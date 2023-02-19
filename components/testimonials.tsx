@@ -15,11 +15,11 @@ export default function Testimonials({ testimonials }) {
   );
 
   return (
-    <section id="reviews" className="isolate pt-32 sm:py-32">
+    <section id="reviews" className="isolate pt-16 sm:py-32">
       <div className="mx-auto max-w-5xl px-6 lg:px-8">
-        <div className="rounded-3xl bg-black/90 px-8 py-16">
+        <div className="rounded-3xl bg-black/90 px-6 py-8 sm:py-16 sm:px-8">
           <figure className="mx-auto grid max-w-2xl items-center gap-8">
-            <blockquote className="text-center text-3xl leading-10 text-white">
+            <blockquote className="text-center text-2xl text-white sm:text-3xl sm:leading-10">
               {featuredTestimonial.testimonial}
             </blockquote>
             <figcaption className="flex flex-col items-center">
@@ -50,7 +50,7 @@ export default function Testimonials({ testimonials }) {
           <ul className="columns-xs space-y-4">
             {otherTestimonials.map((testimonial: any) => (
               <li key={testimonial.slug} className="break-inside-avoid">
-                <div className="rounded-2xl bg-white/40 p-10 backdrop-blur">
+                <div className="rounded-2xl bg-white/40 p-6 backdrop-blur sm:p-10">
                   <figure className="grid gap-8">
                     <blockquote className="text-xl">
                       {testimonial.testimonial}
