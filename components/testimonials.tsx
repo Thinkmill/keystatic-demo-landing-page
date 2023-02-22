@@ -42,7 +42,7 @@ export default function Testimonials({ testimonials }: ComponentProps) {
               <img
                 src={`/content/testimonials/${featuredTestimonial.slug}/${featuredTestimonial.avatar}`}
                 alt=""
-                className="h-12 w-12 rounded-full"
+                className="h-12 w-12 rounded-full object-cover"
               />
               <p className="mt-3 text-sm font-medium leading-none text-white">
                 {featuredTestimonial.author}
@@ -77,7 +77,7 @@ export default function Testimonials({ testimonials }: ComponentProps) {
                         height={40}
                         src={`/content/testimonials/${testimonial.slug}/${testimonial.avatar}`}
                         alt=""
-                        className="h-10 w-10 rounded-full"
+                        className="h-10 w-10 rounded-full object-cover"
                       />
                       <div>
                         <p className="text-sm font-medium leading-none">
