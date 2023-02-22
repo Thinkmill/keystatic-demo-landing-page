@@ -17,11 +17,7 @@ const plans = [
   {
     name: "Pro",
     monthlyPrice: 30,
-    features: [
-      "Multi-layered encryption",
-      "Pay later, interest-free",
-      "$1,000 credit limit",
-    ],
+    features: ["Multi-layered encryption", "Pay later, interest-free"],
     upgradeFeatures: [
       "Approval in minutes",
       "Flexible repayments",

@@ -52,12 +52,16 @@ export default function Features() {
             className="rounded-2xl"
           />
         </div>
-        <Accordion.Root type="single" className="space-y-4 md:space-y-8">
+        <Accordion.Root
+          type="single"
+          defaultValue="1"
+          className="space-y-4 md:space-y-8"
+        >
           {features.map((feature) => (
             <Accordion.Item
               key={feature.id}
               value={feature.id.toString()}
-              className="relative rounded-2xl p-10 backdrop-blur-sm data-[state=open]:bg-white data-[state=closed]:bg-white/30"
+              className="relative rounded-2xl p-10 backdrop-blur-sm data-[state=open]:bg-white/60 data-[state=closed]:bg-white/30"
             >
               <Accordion.Header className="text-2xl font-bold leading-7">
                 <span dangerouslySetInnerHTML={{ __html: feature.title }} />
