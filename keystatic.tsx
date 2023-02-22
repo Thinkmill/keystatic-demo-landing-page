@@ -4,8 +4,8 @@ export default config({
   storage: {
     kind: "github",
     repo: {
-      owner: "Thinkmill",
-      name: "keystatic-starter-landing-page",
+      owner: process.env.NEXT_PUBLIC_VERCEL_GIT_REPO_OWNER!,
+      name: process.env.NEXT_PUBLIC_VERCEL_GIT_REPO_SLUG!,
     },
   },
   singletons: {
