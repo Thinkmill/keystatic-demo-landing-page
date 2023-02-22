@@ -14,7 +14,7 @@ const KeystaticBanner = () => {
       <strong className="text-white">KEYSTATIC</strong> template.{" "}
       <a
         href="https://keystatic.thinkmill.com.au"
-        className="text-white hover:text-[#ed0000]"
+        className="text-white underline hover:text-[#ed0000]"
         target="_blank"
         rel="noopener noreferrer"
       >
