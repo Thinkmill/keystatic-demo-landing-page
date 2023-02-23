@@ -1,6 +1,6 @@
 "use client";
 
-import { makePage } from "keystatic/next-app";
-import config from "../../keystatic";
+import { makePage } from "@keystatic/next/ui/app";
+import config from "../../keystatic.config";
 
 export default makePage(config);

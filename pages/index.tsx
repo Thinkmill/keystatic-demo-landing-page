@@ -1,6 +1,6 @@
 // Keystatic
-import { createReader } from "keystatic/reader";
-import keystaticConfig from "../keystatic";
+import { createReader } from "@keystatic/core/reader";
+import keystaticConfig from "../keystatic.config";
 
 // Page section components
 import BackgroundBlobs from "../components/background-blobs";
