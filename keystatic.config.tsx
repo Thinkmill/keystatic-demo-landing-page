@@ -27,7 +27,7 @@ export default config({
     testimonials: collection({
       directory: "public/content/testimonials",
       label: "Testimonials",
-      getItemSlug: (data) => data.slug,
+      slugField: "slug",
       schema: {
         author: fields.text({ label: "Author" }),
         slug: fields.text({ label: "Slug" }),
