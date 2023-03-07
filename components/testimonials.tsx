@@ -25,10 +25,11 @@ export default function Testimonials({ testimonials }: ComponentProps) {
       (testimonial: TestimonialProps) => testimonial.featured
     ) || testimonials[0];
 
-  const otherTestimonials = testimonials.filter(
-    (testimonial: TestimonialProps) =>
-      testimonial.slug !== featuredTestimonial.slug
-  );
+  const otherTestimonials = [
+    ...testimonials.filter(
+      (testimonial: TestimonialProps) => !testimonial.featured
+    ),
+  ];
 
   return (
     <section id="reviews" className="isolate pt-16 sm:pt-32">

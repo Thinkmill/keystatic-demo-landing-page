@@ -42,7 +42,7 @@ export default config({
       slugField: "slug",
       schema: {
         author: fields.text({ label: "Author" }),
-        slug: fields.text({ label: "Slug" }),
+        slug: fields.slug({ name: { label: "Slug" } }),
         testimonial: fields.text({ label: "Testimonial", multiline: true }),
         featured: fields.checkbox({ label: "Featured testimonial" }),
         twitterHandle: fields.text({ label: "Twitter handle" }),
