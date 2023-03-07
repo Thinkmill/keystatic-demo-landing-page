@@ -11,7 +11,7 @@ export default config({
   singletons: {
     landingPage: singleton({
       label: "Landing Page",
-      directory: "public/content/landing-page",
+      path: "public/content/landing-page/",
       schema: {
         heroHeadline: fields.text({ label: "Hero headline" }),
         heroIntroText: fields.text({
@@ -25,7 +25,7 @@ export default config({
   },
   collections: {
     testimonials: collection({
-      directory: "public/content/testimonials",
+      path: "public/content/testimonials/*/",
       label: "Testimonials",
       slugField: "slug",
       schema: {
