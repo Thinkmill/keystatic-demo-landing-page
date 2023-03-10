@@ -41,7 +41,7 @@ export default function Testimonials({ testimonials }: ComponentProps) {
             </blockquote>
             <figcaption className="flex flex-col items-center">
               <img
-                src={`/content/testimonials/${featuredTestimonial.slug}/${featuredTestimonial.avatar}`}
+                src={`/images/testimonials/${featuredTestimonial.slug}/${featuredTestimonial.avatar}`}
                 alt=""
                 className="h-12 w-12 rounded-full object-cover"
               />

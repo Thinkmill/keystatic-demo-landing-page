@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 // Keystatic
 import { createReader } from "@keystatic/core/reader";
 import keystaticConfig from "../keystatic.config";
@@ -21,6 +23,13 @@ type HomepageProps = {
 export default function Index({ testimonials, landingPage }: HomepageProps) {
   return (
     <>
+      <Head>
+        <title>Keystatic | Marketing Landing Page Template</title>
+        <meta
+          name="description"
+          content="Slate is a fictive product marketing landing page demo for Keystatic. Built by Thinkmill with Tailwind CSS and Next.js."
+        />
+      </Head>
       <div className="relative w-full">
         <Navbar />
         <main className="relative z-10 bg-gray-100">
@@ -55,7 +64,7 @@ export async function getStaticProps() {
   const testimonials = await Promise.all(
     testimonialSlugs.map(async (slug) => {
       const testimonial = await reader.collections.testimonials.read(slug);
-      return testimonial;
+      return { ...testimonial, slug };
     })
   );
 

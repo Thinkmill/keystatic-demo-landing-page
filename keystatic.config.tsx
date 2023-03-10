@@ -23,7 +23,7 @@ export default config({
   singletons: {
     landingPage: singleton({
       label: "Landing Page",
-      path: "public/content/landing-page/",
+      path: "content/landing-page/",
       schema: {
         heroHeadline: fields.text({ label: "Hero headline" }),
         heroIntroText: fields.text({
@@ -37,16 +37,19 @@ export default config({
   },
   collections: {
     testimonials: collection({
-      path: "public/content/testimonials/*/",
+      path: "content/testimonials/*/",
       label: "Testimonials",
-      slugField: "slug",
+      slugField: "author",
       schema: {
-        author: fields.text({ label: "Author" }),
-        slug: fields.slug({ name: { label: "Slug" } }),
+        author: fields.slug({ name: { label: "Author" } }),
         testimonial: fields.text({ label: "Testimonial", multiline: true }),
         featured: fields.checkbox({ label: "Featured testimonial" }),
         twitterHandle: fields.text({ label: "Twitter handle" }),
-        avatar: fields.image({ label: "Avatar" }),
+        avatar: fields.image({
+          label: "Avatar",
+          directory: "public/images/testimonials",
+          validation: { isRequired: true },
+        }),
       },
     }),
   },
