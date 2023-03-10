@@ -1,10 +1,9 @@
-import Head from "next/head";
-
 // Keystatic
 import { createReader } from "@keystatic/core/reader";
 import keystaticConfig from "../keystatic.config";
 
 // Page section components
+import Head from "../components/head";
 import BackgroundBlobs from "../components/background-blobs";
 import Features from "../components/features";
 import Footer, { FooterProps } from "../components/footer";
@@ -23,13 +22,7 @@ type HomepageProps = {
 export default function Index({ testimonials, landingPage }: HomepageProps) {
   return (
     <>
-      <Head>
-        <title>Keystatic | Marketing Landing Page Template</title>
-        <meta
-          name="description"
-          content="Slate is a fictive product marketing landing page demo for Keystatic. Built by Thinkmill with Tailwind CSS and Next.js."
-        />
-      </Head>
+      <Head />
       <div className="relative w-full">
         <Navbar />
         <main className="relative z-10 bg-gray-100">
