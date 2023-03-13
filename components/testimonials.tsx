@@ -76,7 +76,7 @@ export default function Testimonials({ testimonials }: ComponentProps) {
                       <Image
                         width={40}
                         height={40}
-                        src={`/content/testimonials/${testimonial.slug}/${testimonial.avatar}`}
+                        src={`/images/testimonials/${testimonial.slug}/${testimonial.avatar}`}
                         alt=""
                         className="h-10 w-10 rounded-full object-cover"
                       />

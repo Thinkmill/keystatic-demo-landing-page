@@ -12,6 +12,8 @@
   },
   "scripts": {
     "dev": "next",
+    "build": "next build",
+    "start": "next start",
     "postinstall": "touch .env"
   },
   "devDependencies": {
