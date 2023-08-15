@@ -1,0 +1,84 @@
+#projects {
+	.project {
+		width: 500px;
+
+		padding: 8px;
+		text-align: left;
+
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 50px;
+
+		border: 1px solid #444;
+
+		.details {
+			padding: 4px;
+			position: relative;
+
+			.title {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+
+				.type {
+					font-style: normal;
+					text-transform: uppercase;
+				}
+
+				.location {
+					padding-left: 26px;
+	
+					margin-left: -10px;
+	
+					background-size: contain;
+					background-repeat: no-repeat;
+				}
+			}
+
+			.name {
+				font-size: x-large;
+				font-weight: bold;
+			}
+
+			.images {
+				height: 400px;
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-position-x: center;
+				background-position-y: center;
+			}
+
+			.financials {
+				margin-top: 10px;
+				margin-left: 40px;
+	
+				th.text, td.text {
+					text-transform: capitalize;
+				}
+				th.amount, td.amount {
+					text-align: right;
+				}
+			}
+
+			.success {
+				height: 30px;
+				color: green;
+
+				ul {
+					list-style: none;
+					list-style-type: none;
+
+					li {
+						float: left;
+						margin-right: 10px;
+					}
+				}
+					
+				ul li:before {
+					content: '✓';
+					margin-right: 3px;
+				}
+			}
+		}
+	}
+}

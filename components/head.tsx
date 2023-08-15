@@ -3,9 +3,9 @@ import { useRouter } from "next/router";
 import NextHead from "next/head";
 
 const meta = {
-  title: "Keystatic | Marketing Landing Page Template",
+  title: "Five Star Buyers Agency",
   description:
-    "Slate is a fictive product marketing landing page demo for Keystatic. Built by Thinkmill with Tailwind CSS and Next.js.",
+    "Landing page for Five Star Buyers Agency",
   imagePath: "/images/seo-image.png",
 };
 
