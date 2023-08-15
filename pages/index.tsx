@@ -9,7 +9,6 @@ import Features from "../components/features";
 import Footer, { FooterProps } from "../components/footer";
 import Hero, { HeroProps } from "../components/hero";
 import Navbar from "../components/navbar";
-import Pricing from "../components/pricing";
 import Testimonials, { TestimonialProps } from "../components/testimonials";
 
 type HomepageProps = {
@@ -35,7 +34,6 @@ export default function Index({ testimonials, landingPage }: HomepageProps) {
           />
           <Features />
           <Testimonials testimonials={testimonials} />
-          <Pricing />
         </main>
         <Footer
           data={{
