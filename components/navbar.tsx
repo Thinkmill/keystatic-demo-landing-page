@@ -5,7 +5,6 @@ import LogoLink from "./logo-link";
 export default function Navbar() {
   return (
     <div className="relative">
-      <KeystaticBanner />
       <header className="absolute inset-x-0 z-20 py-4 sm:fixed sm:h-24 sm:bg-white/[85%] sm:py-6 sm:backdrop-blur">
         <div className="mx-auto flex h-full max-w-5xl items-center justify-between px-6 lg:px-8">
           <LogoLink />
@@ -17,15 +16,12 @@ export default function Navbar() {
               <a className="font-medium" href="#reviews">
                 Reviews
               </a>
-              <a className="font-medium" href="#pricing">
-                Pricing
-              </a>
             </div>
             <Link
               href="#"
               className="rounded-full bg-black px-5 py-2.5 font-medium text-white hover:bg-gray-900"
             >
-              Sign up
+              Contact us
             </Link>
           </nav>
         </div>
