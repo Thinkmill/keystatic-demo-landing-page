@@ -1,5 +1,5 @@
 {
-  "name": "@keystatic/starter-landing-page",
+  "name": "insight",
   "dependencies": {
     "@keystatic/core": "^0.0.104",
     "@keystatic/next": "^0.0.7",

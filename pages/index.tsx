@@ -26,7 +26,7 @@ export default function Index({ testimonials, landingPage }: HomepageProps) {
       <div className="relative w-full">
         <Navbar />
         <main className="relative z-10 bg-gray-100">
-          <BackgroundBlobs />
+          {/* <BackgroundBlobs /> */}
           <Hero
             data={{
               heroHeadline: landingPage.heroHeadline,
