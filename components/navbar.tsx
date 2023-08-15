@@ -16,6 +16,9 @@ export default function Navbar() {
               <a className="font-medium" href="#reviews">
                 Reviews
               </a>
+              <a className="font-medium" href="#portfolio">
+                Portfolio
+              </a>
             </div>
             <Link
               href="#"
