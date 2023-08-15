@@ -7,27 +7,29 @@ import featuresImageCropped from "../public/images/features-image-cropped.png";
 const features = [
   {
     id: 1,
-    title: `Created by slate. <br />
-  Powered by iPhone.`,
-    text: `Featuring advanced encryption technology, Slate takes full
-  advantage of the latest device privacy and performance
-  capabilities available.`,
+    title: `Discover`,
+    text: `We understand your specific investment requirements`,
   },
   {
     id: 2,
-    title: `No surcharges. <br />
-    Not even international ones.`,
-    text: `Featuring advanced encryption technology, Slate takes full
-  advantage of the latest device privacy and performance
-  capabilities available.`,
+    title: `Strategy`,
+    text: `We help device a strategy that aims to achieve your goals`,
   },
   {
     id: 3,
-    title: `Peace of mind payments for your everyday transactions.`,
-    text: `Featuring advanced encryption technology, Slate takes full
-  advantage of the latest device privacy and performance
-  capabilities available.`,
+    title: `Research`,
+    text: `We do the Search, Feasibility Study, All background checks`,
   },
+  {
+    id: 4,
+    title: `Evaluate`,
+    text: `Filter a handful of properties that match your search`,
+  },
+  {
+    id: 5,
+    title: `Negotiate`,
+    text: `Leaveraging our knowledge, skills and relationships to secure the property`,
+  }
 ];
 
 export default function Features() {
