@@ -4,13 +4,13 @@ import keystaticConfig from "../keystatic.config";
 
 // Page section components
 import Head from "../components/head";
-import BackgroundBlobs from "../components/background-blobs";
+// import BackgroundBlobs from "../components/background-blobs";
 import Features from "../components/features";
 import Footer, { FooterProps } from "../components/footer";
 import Hero, { HeroProps } from "../components/hero";
 import Navbar from "../components/navbar";
 import Testimonials, { TestimonialProps } from "../components/testimonials";
-import ProjectsPage from "../components/projects/ProjectsPage";
+import Projects from "../components/projects/Projects";
 
 type HomepageProps = {
   testimonials: TestimonialProps[];
@@ -35,7 +35,7 @@ export default function Index({ testimonials, landingPage }: HomepageProps) {
           />
           <Features />
           <Testimonials testimonials={testimonials} />
-		  <ProjectsPage />
+		  <Projects />
         </main>
         <Footer
           data={{

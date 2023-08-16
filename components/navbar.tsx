@@ -16,7 +16,7 @@ export default function Navbar() {
               <a className="font-medium" href="#reviews">
                 Reviews
               </a>
-              <a className="font-medium" href="#portfolio">
+              <a className="font-medium" href="#projects">
                 Portfolio
               </a>
             </div>

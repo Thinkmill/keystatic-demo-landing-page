@@ -7,27 +7,27 @@ import featuresImageCropped from "../public/images/features-image-cropped.png";
 const features = [
   {
     id: 1,
-    title: `Discover`,
-    text: `We understand your specific investment requirements`,
+    title: `Discovery`,
+    text: `We understand what matters the most for your specific investment requirements`,
   },
   {
     id: 2,
     title: `Strategy`,
-    text: `We help device a strategy that aims to achieve your goals`,
+    text: `We help device a strategy that aims to achieve your investment goals`,
   },
   {
     id: 3,
     title: `Research`,
-    text: `We do the Search, Feasibility Study, All background checks`,
+    text: `We do the Search based on your Financials, Suitability, Feasibility Study, All background checks`,
   },
   {
     id: 4,
-    title: `Evaluate`,
-    text: `Filter a handful of properties that match your search`,
+    title: `Evaluation`,
+    text: `Filter and arrive at a handful of properties that match your search criteria`,
   },
   {
     id: 5,
-    title: `Negotiate`,
+    title: `Negotiation`,
     text: `Leaveraging our knowledge, skills and relationships to secure the property`,
   }
 ];

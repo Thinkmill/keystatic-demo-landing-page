@@ -3,7 +3,7 @@ import './Projects.scss';
 import { useState, useEffect } from "react";
 
 import { IProjectData } from "./Projects.interfaces";
-import { getProjectsLocal } from "../../Projects.service";
+import { getProjectsLocal } from "./Projects.service";
 
 const Projects = (props: any) => {
 	const [projects, setProjects] = useState([]);
