@@ -18,7 +18,7 @@
 		{
 			"id": 12,
 			"type": "First Home",
-			"name": "in the most advantaged suburb",
+			"name": "In the most advantaged suburb",
 			"location": "Sydney west-northwest",
 			"address": "Ponds",
 			"images": ["images/portfolio/12.png"],
@@ -92,7 +92,7 @@
 		{
 			"id": 17,
 			"type": "Development Opportunity",
-			"name": "DA in-progress for additional Townhouses",
+			"name": "DA in-progress for Townhouses",
 			"location": "Victoria",
 			"address": "6 Candeloro St, Victoria",
 			"images": ["images/portfolio/17.png"],
@@ -123,7 +123,7 @@
 		{
 			"id": 19,
 			"type": "Multi-option development site",
-			"name": "Subdivide, build new house, sell/keep it",
+			"name": "Subdivide & sell the land",
 			"location": "Perth, WA",
 			"address": "Perth, WA",
 			"images": ["images/portfolio/19.png"],

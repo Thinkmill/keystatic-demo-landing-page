@@ -1,12 +1,13 @@
 #projects {
-	margin: 50px;
+	margin-top: 50px;
 
 	.project {
-		width: 500px;
-		height: 700px;
+		width: 380px;
+		height: 600px;
 
-		padding: 8px;
+		padding: 5px;
 		text-align: left;
+		font-size: smaller;
 
 		margin-left: auto;
 		margin-right: auto;
@@ -43,16 +44,23 @@
 			}
 
 			.name {
-				font-size: x-large;
+				font-size: large;
 				font-weight: bold;
 			}
 
 			.images {
-				height: 350px;
+				height: 320px;
 				background-size: cover;
 				background-repeat: no-repeat;
 				background-position-x: center;
 				background-position-y: center;
+			}
+
+			.features {
+				margin-left: 25px;
+				ul {
+					list-style: circle;
+				}
 			}
 
 			.financials {
