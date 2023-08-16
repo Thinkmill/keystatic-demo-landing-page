@@ -27,8 +27,8 @@ const Projects = (props: any) => {
 				autoplay="true"
 			>
 				{projects!.length > 0 ? projects!.map((project: IProjectData) => (
-					<swiper-slide>
-						<div className="project" key={project.id}>
+					<swiper-slide key={project.id}>
+						<div className="project">
 							<div className="details">
 								<div className='title'>
 									<div className="type">{project.type}</div>
