@@ -3,6 +3,7 @@
 
 	.project {
 		width: 500px;
+		height: 700px;
 
 		padding: 8px;
 		text-align: left;
@@ -16,6 +17,10 @@
 		.details {
 			padding: 4px;
 			position: relative;
+
+			> div {
+				margin-bottom: 5px;
+			}
 
 			.title {
 				display: flex;
@@ -43,8 +48,8 @@
 			}
 
 			.images {
-				height: 400px;
-				background-size: contain;
+				height: 350px;
+				background-size: cover;
 				background-repeat: no-repeat;
 				background-position-x: center;
 				background-position-y: center;

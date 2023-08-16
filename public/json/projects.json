@@ -92,7 +92,7 @@
 		{
 			"id": 17,
 			"type": "Development Opportunity",
-			"name": "Land-banked in one of the most sought-after locations",
+			"name": "DA in-progress for additional Townhouses",
 			"location": "Victoria",
 			"address": "6 Candeloro St, Victoria",
 			"images": ["images/portfolio/17.png"],
@@ -101,7 +101,7 @@
 				"estimated_sale_price": "1,800,000",
 				"current_weekly_rent": "500"
 			},
-			"features": ["High-density zoned", "Town-houses potential", "Close to a regional town centre"],
+			"features": ["sought-after location", "High-density zoned", "Town-houses potential", "Close to a regional town centre"],
 			"success": ["DA in-progress for multiple Town-houses"]
 		},
 		{
