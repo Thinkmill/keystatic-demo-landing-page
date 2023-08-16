@@ -67,9 +67,9 @@
 			"images": ["images/portfolio/15.png"],
 			"financials": {
 				"purchase_cost": "720,000",
-				"holding_costs": "200,000",
-				"development_costs": "50,000",
-				"sold_cost": "1,400,000"
+				"holding_costs": "50,000",
+				"development_costs": "30,000",
+				"sold_cost": "1,450,000"
 			},
 			"features": [],
 			"success": ["DA approved for 7 Additional Townhouses"]
