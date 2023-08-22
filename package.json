@@ -3,15 +3,15 @@
   "dependencies": {
     "@keystatic/core": "^0.0.116",
     "@keystatic/next": "^0.0.11",
-    "@radix-ui/react-accordion": "^1.1.1",
-    "@types/react": "^18.0.26",
+    "@radix-ui/react-accordion": "^1.1.2",
+    "@types/react": "^18.2.21",
     "next": "^13.4.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "typescript": "^4.9.4"
+    "typescript": "^5.1.6"
   },
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 4444",
     "build": "next build",
     "start": "next start",
     "postinstall": "touch .env"
