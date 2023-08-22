@@ -37,6 +37,7 @@ export default function Head() {
       <meta property="og:site_name" content={meta.title} />
       <meta property="og:url" content={rootUrl} />
       <meta property="og:image" content={rootUrl + meta.imagePath} />
+      <link rel="icon" href="/favicon.ico" />
     </NextHead>
   );
 }
