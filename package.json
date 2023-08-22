@@ -1,11 +1,11 @@
 {
   "name": "@keystatic/starter-landing-page",
   "dependencies": {
-    "@keystatic/core": "^0.0.63",
-    "@keystatic/next": "^0.0.4",
+    "@keystatic/core": "^0.0.116",
+    "@keystatic/next": "^0.0.11",
     "@radix-ui/react-accordion": "^1.1.1",
     "@types/react": "^18.0.26",
-    "next": "^13.2.4",
+    "next": "^13.4.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^4.9.4"
@@ -17,10 +17,10 @@
     "postinstall": "touch .env"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.21",
-    "prettier": "^2.8.4",
-    "prettier-plugin-tailwindcss": "^0.2.4",
-    "tailwindcss": "^3.2.6"
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.28",
+    "prettier": "^3.0.2",
+    "prettier-plugin-tailwindcss": "^0.5.3",
+    "tailwindcss": "^3.3.3"
   }
 }
