@@ -61,7 +61,7 @@ function KeystaticBanner() {
       </svg>{" "}
       template.{" "}
       <a
-        href="https://keystatic.thinkmill.com.au"
+        href="https://keystatic.com"
         className="text-white underline hover:text-yellow-300"
         target="_blank"
         rel="noopener noreferrer"
