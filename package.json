@@ -11,7 +11,7 @@
     "typescript": "^5.1.6"
   },
   "scripts": {
-    "dev": "next -p 4444",
+    "dev": "next",
     "build": "next build",
     "start": "next start",
     "postinstall": "touch .env"
