@@ -1,5 +1,5 @@
 {
-  "name": "@keystatic/starter-landing-page",
+  "name": "@keystatic/demo-landing-page",
   "dependencies": {
     "@keystatic/core": "^0.0.116",
     "@keystatic/next": "^0.0.11",
