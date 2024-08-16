@@ -10,7 +10,7 @@
 			"financials": {
 				"purchase_cost": "720,000",
 				"current_value": "1,300,000",
-				"current_weekly_rent": "930"
+				"current_weekly_rent": "880"
 			},
 			"features": ["Great community", "Close to Shopping", "Close to Public Transport"],
 			"success": ["Appreciation", "Positive gearing"]
@@ -20,7 +20,7 @@
 			"type": "First Home",
 			"name": "In the most advantaged suburb",
 			"location": "Sydney west-northwest",
-			"address": "Ponds",
+			"address": "17 Shipley St, The Ponds",
 			"images": ["images/portfolio/12.png"],
 			"financials": {
 				"purchase_cost": "920,000",
@@ -38,8 +38,8 @@
 			"images": ["images/portfolio/13.png"],
 			"financials": {
 				"purchase_cost": "370,000",
-				"current_value": "630,000",
-				"current_weekly_rent": "550"
+				"current_value": "670,000",
+				"current_weekly_rent": "540"
 			},
 			"features": ["40 min to Melbourne CBD", "Great views"],
 			"success": ["Positive gearing"]
@@ -69,7 +69,7 @@
 				"purchase_cost": "720,000",
 				"holding_costs": "50,000",
 				"development_costs": "30,000",
-				"sold_cost": "1,450,000"
+				"sold_price": "1,450,000"
 			},
 			"features": [],
 			"success": ["DA approved for 7 Additional Townhouses"]

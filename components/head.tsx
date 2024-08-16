@@ -3,9 +3,9 @@ import { useRouter } from "next/router";
 import NextHead from "next/head";
 
 const meta = {
-  title: "Five Star Buyers Agency",
+  title: "InvestorPro Buyer's Agency",
   description:
-    "Landing page for Five Star Buyers Agency",
+    "Landing page for InvestorPro Buyer's Agency",
   imagePath: "/images/seo-image.png",
 };
 

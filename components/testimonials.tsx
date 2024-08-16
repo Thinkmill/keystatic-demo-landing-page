@@ -59,7 +59,7 @@ export default function Testimonials({ testimonials }: ComponentProps) {
         </div>
 
         <h2 className="mt-16 max-w-2xl text-3xl font-bold sm:mt-24 sm:text-5xl md:mt-40">
-          Our users have many reasons to choose Five Star.
+          Our users have many reasons to choose InvestorPro.
         </h2>
         <p className="mt-6 text-xl sm:mt-8">Here's the latest.</p>
 

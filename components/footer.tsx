@@ -21,8 +21,8 @@ export default function Footer({
         <div className="relative isolate z-40 mx-auto h-96 max-h-screen max-w-xl px-6 lg:px-8">
 			<div>
 				<a className="group text-4xl font-bold" href="/">
-					<span className="font-bold">Five Star</span>
-				</a> <span className="ml-2 text-xl">Buyers Agents</span>
+					<span className="font-bold">InvestorPro</span>
+				</a> <span className="ml-2 text-xl">Buyer's Agency</span>
 			</div>
           <p className="mt-4 text-4xl font-bold sm:mt-10 sm:text-5xl md:text-4xl whitespace-pre-line">
             {footerHeadline}
