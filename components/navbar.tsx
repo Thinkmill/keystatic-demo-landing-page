@@ -17,8 +17,8 @@ export default function Navbar() {
 						</div>
 
 						<div className="links">
-							<Link href="/keystatic" className="rounded-full px-5 py-2.5 font-medium hidden gap-10 sm:inline"> Admin </Link>
-							<Link href="#" className="rounded-full bg-black px-5 py-2.5 font-medium text-white hover:bg-gray-900 whitespace-nowrap"> Contact us </Link>
+							{/* <Link href="/keystatic" className="rounded-full px-5 py-2.5 font-medium hidden gap-10 sm:inline"> Admin </Link> */}
+							<Link href="#" className="rounded-full bg-black px-5 py-2.5 font-medium text-white hover:bg-gray-900 whitespace-nowrap"> Call: +61 432 908 730 </Link>
 						</div>
 					</nav>
 				</div>
